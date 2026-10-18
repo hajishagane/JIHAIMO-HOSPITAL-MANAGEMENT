@@ -46,7 +46,7 @@ def initiate_stk_push(phone_number: str, amount: float, reference: str):
         
     # The URL Safaricom will hit to tell us if the payment succeeded
     # We use your Render URL here so Safaricom can reach it!
-    backend_url = os.getenv("RENDER_EXTERNAL_URL", "https://medicare-backend-u7r1.onrender.com")
+        backend_url = os.getenv("RENDER_EXTERNAL_URL", "https://hospital-api-2aq6.onrender.com")
     callback_url = f"{backend_url}/api/billing/mpesa-callback"
     
     headers = {

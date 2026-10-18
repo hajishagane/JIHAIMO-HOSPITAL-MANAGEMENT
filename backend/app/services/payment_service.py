@@ -68,6 +68,6 @@ def initiate_stk_push(phone_number: str, amount: float, reference: str):
         "TransactionDesc": "Hospital Bill"
     }
     
-        response = requests.post(api_url, json=payload, headers=headers)
+    response = requests.post(api_url, json=payload, headers=headers)
     print("SAFARICOM RESPONSE:", response.text) # <-- ADD THIS LINE
     return response.json()

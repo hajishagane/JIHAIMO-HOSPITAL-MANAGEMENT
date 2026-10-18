@@ -30,7 +30,7 @@ const Layout = ({ children, setIsAuthenticated }) => {
     fetchPermissions();
     if (!userId) return;
 
-    const socket = new WebSocket(`ws://localhost:8000/ws/notifications/${userId}`);
+    const socket = new WebSocket(wss://hospital-api-2aq6.onrender.com/ws/notifications/${userId});
     
     socket.onopen = () => console.log("🟢 WebSocket Connected Successfully!");
     

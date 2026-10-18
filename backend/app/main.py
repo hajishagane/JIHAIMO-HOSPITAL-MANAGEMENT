@@ -72,14 +72,15 @@ origins = [
     "http://localhost:5173",  
     "http://127.0.0.1:5173",
     "http://localhost:3000",
-    "https://hospital-management-system-7e9s.vercel.app" # REMOVED the trailing slash!
+    "https://hospital-management-system-7e9s.vercel.app",
+    "https://jihaimo-hospital-management.pages.dev"
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
-    # This regex automatically allows ALL Vercel preview branches for your specific app!
-    allow_origin_regex=r"https://hospital-management-system-.*\.vercel\.app",
+    # This regex allows both your Vercel and Cloudflare Pages URLs
+    allow_origin_regex=r"https://(hospital-management-system-.*\.vercel\.app|.*\.pages\.dev)",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
